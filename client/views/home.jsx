@@ -8,30 +8,30 @@ function Home() {
 		window.open('https://github.com/zubair-akbar');
 	};
 
-  let handleRouteChange = () => {
+	let handleRouteChange = () => {
   	<Link to="/about">About</Link>;
-  };
+	};
 
-  return (
-    <div>
-      <Header>VERTEX Route</Header>
-      <Para>An app that makes it a little easier to ascend...</Para>
-      <p><Link to="/About">About</Link></p>
-      <ButtonWrap>
-        <Button
-        >
+	return (
+		<div>
+			<Header>VERTEX Route</Header>
+			<Para>An app that makes it a little easier to ascend...</Para>
+			<p><Link to="/About">About</Link></p>
+			<ButtonWrap>
+				<Button
+				>
           How it works
-						</Button>
-        <Button
-          onClick={handleGitClick}>
+				</Button>
+				<Button
+					onClick={handleGitClick}>
           View on Github
-						</Button>
-      </ButtonWrap>
-    </div>
-  )
+				</Button>
+			</ButtonWrap>
+		</div>
+	);
 }
 
-export default Home
+export default Home;
 
 const Header = styled.h1`
   font-weight: 600;

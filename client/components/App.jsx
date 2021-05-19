@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../views/home';
 import About from '../views/about';
 
@@ -27,7 +27,6 @@ function App() {
 
 	);
 }
-
 
 const Wrapper = styled.div`
   display: flex;
