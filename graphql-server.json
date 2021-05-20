@@ -1,0 +1,44 @@
+{
+  "mountains": [
+    {
+      "id": 1,
+      "name": "Mount Fuji",
+      "elevation": 3776,
+      "calories": 4000,
+      "time": "17 hours",
+      "location": "Shizuoka, Japan"
+    },
+    {
+      "id": 2,
+      "name": "Mount Whitney",
+      "elevation": 4421,
+      "calories": 4000,
+      "time": "15 hours, 45 minutes",
+      "location": "Lone Pine, USA"
+    },
+    {
+      "id": 3,
+      "name": "Mount Blanc",
+      "elevation": 3776,
+      "calories": 4808,
+      "time": "24 hours, 15 minutes",
+      "location": "Chamonix, France"
+    },
+    {
+      "id": 4,
+      "name": "Eiger",
+      "elevation": 3967,
+      "calories": 3150,
+      "time": "17 hours",
+      "location": "Bern, Switzerland"
+    },
+    {
+      "id": 5,
+      "name": "Mount Damavand",
+      "elevation": 5609,
+      "calories": 5400,
+      "time": "25 hours, 20 minutes",
+      "location": "Mazandaran, Iran"
+    }
+  ]
+}

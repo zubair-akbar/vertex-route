@@ -14,7 +14,7 @@ function Home() {
 			<Header>VERTEX Route</Header>
 			<Para>An app that makes it a little easier to ascend...</Para>
 			<ButtonWrap>
-				<Link to="/about">
+				<Link to="/development">
 					<Button
 					>
           How it works

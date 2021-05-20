@@ -1,7 +1,7 @@
 import React, { Component, useState, useRef } from 'react';
 import styled from 'styled-components';
 
-const SearchBar = () => {
+const SearchBar = ( {selection, setSelection} ) => {
 
 	const [input, setInput] = useState('');
 	const [barOpened, setBarOpened] = useState(false);
@@ -11,10 +11,11 @@ const SearchBar = () => {
 	const onFormSubmit = e => {
 		// When form submited, clear input, close the searchbar and do something with input
 		e.preventDefault();
-		setInput('');
+		setSelection(e.target.value);
 		setBarOpened(false);
 		// After form submit, do what you want with the input value
 		console.log(`Form was submited with input: ${input}`);
+		console.log(selection);
 	};
 	return (
 
@@ -47,7 +48,7 @@ const SearchBar = () => {
 					ref={inputFocus}
 					value={input}
 					barOpened={barOpened}
-					placeholder="Search for a peak"
+					placeholder="Search..."
 				/>
 			</Form>
 		</div>
@@ -65,7 +66,7 @@ const Form = styled.form`
   opacity: 0.5;
   background-color: black;
   /* Change width of the form depending if the bar is opened or not */
-  width: ${props => (props.barOpened ? '16rem' : '8rem')};
+  width: ${props => (props.barOpened ? '14rem' : '5rem')};
   /* If bar opened, normal cursor on the whole form. If closed, show pointer on the whole form so user knows he can click to open it */
   cursor: ${props => (props.barOpened ? 'auto' : 'pointer')};
   padding: 2rem;

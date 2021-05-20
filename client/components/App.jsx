@@ -6,29 +6,36 @@ import About from '../views/about';
 import Development from '../views/development';
 import SideBar from '../components/Sidebar';
 
-function App() {
 
+function App() {
+	const [selection, setSelection] = useState('');
 
 	console.log(location.pathname);
 
 	return (
-		<div>
-			<Router>
-				<SideBar right width={ '12%' } />
-				<div>
-					<MyVideo loop autoPlay muted>
-						<source src='./assets/MFJI.mp4' type="video/mp4"></source>
-					</MyVideo>
 
-					<Switch>
-						<Route path="/Development" component={Development} />
-						<Route path="/About" component={About} />
-						<Route path="/" component={Home}/>
-					</Switch>
 
-				</div>
-			</Router>
-		</div>
+		<Router>
+			<SideBar right width={ '12%' } />
+			<div>
+				<MyVideo loop autoPlay muted>
+					<source src='./assets/MFJI.mp4' type="video/mp4"></source>
+				</MyVideo>
+
+				<Switch>
+					<Route path="/Development" render={() => <Development
+						setSelection={setSelection}
+						selection={selection}
+					/>}
+					/>
+					<Route path="/About" component={About} />
+					<Route path="/" component={Home}/>
+				</Switch>
+
+			</div>
+		</Router>
+
+
 	);
 }
 
