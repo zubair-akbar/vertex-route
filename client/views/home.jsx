@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 
 function Home() {
 
@@ -8,20 +9,17 @@ function Home() {
 		window.open('https://github.com/zubair-akbar');
 	};
 
-	let handleRouteChange = () => {
-  	<Link to="/about">About</Link>;
-	};
-
 	return (
 		<div>
 			<Header>VERTEX Route</Header>
 			<Para>An app that makes it a little easier to ascend...</Para>
-			<p><Link to="/About">About</Link></p>
 			<ButtonWrap>
-				<Button
-				>
+				<Link to="/about">
+					<Button
+					>
           How it works
-				</Button>
+					</Button>
+				</Link>
 				<Button
 					onClick={handleGitClick}>
           View on Github

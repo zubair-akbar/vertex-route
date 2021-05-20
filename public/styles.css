@@ -4,3 +4,48 @@
     url('./assets/FontsFree-Net-Proxima-Nova-Cond-Reg.otf')
     format('opentype');
 }
+
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: rgb(177, 31, 31);
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 36px;
+  top: 26px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #f1f1f1;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+
+  padding: 2.5em 1.5em 0;
+  font-size: 1.2em;
+}

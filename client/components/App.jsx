@@ -1,30 +1,32 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import Home from '../views/home';
 import About from '../views/about';
+import SideBar from '../components/Sidebar';
 
 function App() {
 
 
 
-
-
+	console.log(location);
 	return (
-		<Router>
-			<div>
-				<MyVideo autoPlay loop muted>
-					<source src='./assets/MFJI.mp4' type="video/mp4"></source>
-				</MyVideo>
-				<Wrapper>
-					<Switch>
-						<Route  path="/About" component={About} />
-						<Route  path="/" component={Home} />
-					</Switch>
-				</Wrapper>
-			</div>
-		</Router>
-
+		<div>
+			<Router>
+				<SideBar right width={ '12%' } />
+				<div>
+					<MyVideo loop autoPlay muted>
+						<source src='./assets/MFJI.mp4' type="video/mp4"></source>
+					</MyVideo>
+					<Wrapper>
+						<Switch>
+							<Route path="/About" component={About} />
+							<Route path="/" component={Home}/>
+						</Switch>
+					</Wrapper>
+				</div>
+			</Router>
+		</div>
 	);
 }
 
