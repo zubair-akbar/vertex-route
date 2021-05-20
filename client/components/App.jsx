@@ -9,6 +9,7 @@ import SideBar from '../components/Sidebar';
 
 function App() {
 	const [selection, setSelection] = useState('');
+	const [modal, setModal] = useState('false');
 
 	console.log(location.pathname);
 
@@ -24,8 +25,10 @@ function App() {
 
 				<Switch>
 					<Route path="/Development" render={() => <Development
-						setSelection={setSelection}
 						selection={selection}
+						setSelection={setSelection}
+						modal={modal}
+						setModal={setModal}
 					/>}
 					/>
 					<Route path="/About" component={About} />

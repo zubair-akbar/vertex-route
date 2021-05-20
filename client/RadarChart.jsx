@@ -1,3 +1,6 @@
+import RadarChart from 'react-svg-radar-chart';
+import 'react-svg-radar-chart/build/css/index.css'
+
 var RadarChart = {
 	draw: function(id, d, options){
 		var cfg = {
