@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-function About() {
+function Development() {
 
 	return (
 		<div className="view">
@@ -20,4 +20,4 @@ function About() {
 }
 
 
-export default About;
+export default Development;

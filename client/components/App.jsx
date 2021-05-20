@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import Home from '../views/home';
 import About from '../views/about';
+import Development from '../views/development';
 import SideBar from '../components/Sidebar';
 
 function App() {
 
 
+	console.log(location.pathname);
 
-	console.log(location);
 	return (
 		<div>
 			<Router>
@@ -20,6 +21,7 @@ function App() {
 					</MyVideo>
 					<Wrapper>
 						<Switch>
+							<Route path="/Development" component={Development} />
 							<Route path="/About" component={About} />
 							<Route path="/" component={Home}/>
 						</Switch>

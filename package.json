@@ -20,6 +20,7 @@
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "react": "^17.0.2",
+    "react-burger-menu": "^3.0.6",
     "react-dom": "^17.0.2",
     "react-native-video": "^5.1.1",
     "react-router-dom": "^5.2.0",
