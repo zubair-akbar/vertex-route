@@ -19,13 +19,13 @@ function App() {
 					<MyVideo loop autoPlay muted>
 						<source src='./assets/MFJI.mp4' type="video/mp4"></source>
 					</MyVideo>
-					<Wrapper>
-						<Switch>
-							<Route path="/Development" component={Development} />
-							<Route path="/About" component={About} />
-							<Route path="/" component={Home}/>
-						</Switch>
-					</Wrapper>
+
+					<Switch>
+						<Route path="/Development" component={Development} />
+						<Route path="/About" component={About} />
+						<Route path="/" component={Home}/>
+					</Switch>
+
 				</div>
 			</Router>
 		</div>
@@ -41,12 +41,9 @@ const Wrapper = styled.div`
   color: #f1f1f1;
   width: 100%;
   padding: 10px;
-  text-align: center;
   font-family: 'Proxima';
-  min-height: 100vh;
+  text-align: center;
 `;
-
-
 
 const MyVideo = styled.video`
   position: fixed;

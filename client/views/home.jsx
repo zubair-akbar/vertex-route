@@ -10,7 +10,7 @@ function Home() {
 	};
 
 	return (
-		<div>
+		<HomeWrapper>
 			<Header>VERTEX Route</Header>
 			<Para>An app that makes it a little easier to ascend...</Para>
 			<ButtonWrap>
@@ -25,11 +25,25 @@ function Home() {
           View on Github
 				</Button>
 			</ButtonWrap>
-		</div>
+		</HomeWrapper>
 	);
 }
 
 export default Home;
+
+const HomeWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Proxima';
+  height: 60%;
+`;
 
 const Header = styled.h1`
   font-weight: 600;
