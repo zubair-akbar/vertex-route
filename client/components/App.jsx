@@ -11,7 +11,7 @@ function App() {
 	const [selection, setSelection] = useState('');
 	const [modal, setModal] = useState('false');
 
-	console.log(location.pathname);
+	console.log('%c Woah! Made by Zubair Akbar 🤓 ', 'background: #222; color: #bada55');
 
 	return (
 

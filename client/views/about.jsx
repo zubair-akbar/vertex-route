@@ -6,7 +6,7 @@ function About() {
 	return (
 		<AboutWrapper>
 			<h1>About</h1>
-      Application created to showcase multiple front and back end technologies revolving around Javascript and React.js.
+      This application was created to showcase multiple front and back end technologies revolving around Javascript and React.js.
 			<br/>If you want to know more about this approach check these links below or checkout my other projects on Github.
 			<br/>React Router DOM, GraphQL, D3, React Transitions Group, Styled Components
 			<h2>Talks where this project is showcased</h2>
