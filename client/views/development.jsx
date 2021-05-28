@@ -14,19 +14,21 @@ function Development({ selection, setSelection, modal, setModal }) {
 
 	return (
 		<DevelopmentWrapper>
-			<div>
-				<h1>Plan your next climb</h1>
-				<div>
+			<ParentGrid>
+				<GridThree>
 					<div>
+						<h1>Plan your next climb</h1>
+						<div>
+							<div>
             Where do you plan to go?
+							</div>
+						</div>
+						<SelectBar
+							selection={selection}
+							setSelection={setSelection}
+						/>
 					</div>
-				</div>
-				<SelectBar
-					selection={selection}
-					setSelection={setSelection}
-				/>
-			</div>
-			{selection !== '' &&
+					{selection !== '' &&
         <Stats>
           You've selected:
         	<br />{selection}
@@ -35,18 +37,25 @@ function Development({ selection, setSelection, modal, setModal }) {
         	<br />Est. continuous movememnt time to summit: {currentSelection[0].time}
         	<br />Location: {currentSelection[0].location}
         </Stats>
-			}
-			<Button
-				onClick={() => setModal(true)}
-			>Add your climb details</Button>
-			<SearchBar
-				selection={selection}
-				setSelection={setSelection}
-			/>
-			<AddDetailsModal
-				onClose={() => setModal(false)}
-				open={modal}
-			/>
+					}
+					<Button
+						onClick={() => setModal(true)}
+					>Add your climb details
+					</Button>
+				</GridThree>
+				<GridTwo>
+					<SearchBar
+						selection={selection}
+						setSelection={setSelection}
+					/>
+					<AddDetailsModal
+						onClose={() => setModal(false)}
+						open={modal}
+					/>
+				</GridTwo>
+				<GridOne/>
+				<GridFour/>
+			</ParentGrid>
 		</DevelopmentWrapper>
 	);
 }
@@ -54,7 +63,7 @@ function Development({ selection, setSelection, modal, setModal }) {
 // <AddDetailsModal
 // 				onClose={() => setModal(false)}
 // 				open={modal}
-// 			/>
+// 			/>d
 
 export default Development;
 
@@ -109,3 +118,29 @@ const Button = styled.button`
     0 0 85px rgba(255, 255, 255, .1);
   }
   `;
+
+
+const ParentGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 11px;
+  grid-row-gap: 11px;
+`;
+
+const GridOne = styled.div`
+  grid-area: 1 / 1 / 9 / 3;
+`;
+
+const GridTwo = styled.div`
+  grid-area: 1 / 7 / 9 / 9;
+`;
+
+const GridThree = styled.div`
+  grid-area: 1 / 3 / 7 / 7;
+`;
+
+const GridFour = styled.div`
+  grid-area: 7 / 3 / 9 / 7;
+`;
+

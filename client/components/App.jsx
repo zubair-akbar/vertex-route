@@ -73,5 +73,10 @@ infinite scroll and render
 
 refer to FEC
 
+consider z index - CSS styling changing normal HTML behavior
+video span across grid elements - look into "span" command to render across grid elements
 
+Display - none, inline, block, you can change it yourself
+
+Something going on with video render and div display
 */
